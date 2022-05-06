@@ -1,5 +1,5 @@
 import express from "express";
-import { signIn, signUp } from "./controllers/sessionControllers.js";
+import { signIn, signUp } from "../controllers/sessionControllers.js";
 import { userValidation, signUpValidation } from "../middlewares/userValidation.js";
 
 const sessionRouter = express.Router();

@@ -1,5 +1,5 @@
 import express from "express";
-import { getBalance, postBalance, deleteBalance, putBalance } from "./controllers/balanceControllers.js"
+import { getBalance, postBalance, deleteBalance, putBalance } from "../controllers/balanceControllers.js"
 
 const balanceRouter = express.Router();
 
