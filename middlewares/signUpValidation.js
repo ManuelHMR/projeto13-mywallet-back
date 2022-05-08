@@ -13,9 +13,9 @@ export async function signUpValidation (req, res, next){
   if (validation.error) {
     return res.sendStatus(422);
   }
-  // const uniqueEmailValidation = sessionsCollection.findOne({email});
-  // if(uniqueEmailValidation){
-  //   return res.sendStatus(409)
-  // }
+  const uniqueEmailValidation = await sessionsCollection.findOne({email: req.body.email});
+  if(uniqueEmailValidation){
+    return res.sendStatus(409)
+  }
   next();
 }
