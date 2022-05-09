@@ -1,7 +1,7 @@
 import joi from "joi";
 
 import db from "../db.js";
-const sessionsCollection = db.collection("sessionsCollection");
+const usersCollection = db.collection("usersCollection");
 
 export async function signUpValidation (req, res, next){
   const userSchema = joi.object({
@@ -13,7 +13,7 @@ export async function signUpValidation (req, res, next){
   if (validation.error) {
     return res.sendStatus(422);
   }
-  const uniqueEmailValidation = await sessionsCollection.findOne({email: req.body.email});
+  const uniqueEmailValidation = await usersCollection.findOne({email: req.body.email});
   if(uniqueEmailValidation){
     return res.sendStatus(409)
   }
