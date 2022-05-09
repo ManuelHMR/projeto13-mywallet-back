@@ -36,3 +36,14 @@ export async function signUp (req, res) {
         res.send(err)
     };
 };
+
+export async function signOut(req, res){
+    try{
+        const token = req.headers.token.replace(/"/g,"").trim();
+        await sessionsCollection.deleteOne({token});
+        res.sendStatus(200)
+    }catch(err){
+        res.send(err)
+    }
+    
+};
