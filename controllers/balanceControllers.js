@@ -15,10 +15,10 @@ export async function getBalance (req, res) {
         let total = 0;
         userBalance.forEach(e => {
             if(e.type === "income"){
-                total += e.value
+                total += Number(e.value)
             }
             else{
-                total -= e.value
+                total -= Number(e.value)
             }
         })
         res.status(200).send({
