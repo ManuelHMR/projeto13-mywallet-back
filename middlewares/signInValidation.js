@@ -12,5 +12,8 @@ export async function signInValidation (req, res, next){
   if(bcrypt.compareSync(password, user.password)){
     res.locals.user = user;
   }
+  else{
+    res.send("Erro")
+  }
   next();
 }
