@@ -12,6 +12,21 @@
   "type": "module",
   "scripts": {
     "start": "node app.js"
-  }
-
+  },
+  "name": "projeto13-mywallet-back",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuelHMR/projeto13-mywallet-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManuelHMR/projeto13-mywallet-back/issues"
+  },
+  "homepage": "https://github.com/ManuelHMR/projeto13-mywallet-back#readme",
+  "description": ""
 }
