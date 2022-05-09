@@ -8,7 +8,10 @@ import sessionRouter from "./routers/sessionRouters.js";
 import balanceRouter from "./routers/balanceRouters.js";
 
 const app = express();
-app.listen(process.env.PORT );
+
+const port = process.env.PORT || 5000;
+
+app.listen(port);
 app.use(express.json());
 app.use(cors()); // DELETAR NO DEPLOY
 

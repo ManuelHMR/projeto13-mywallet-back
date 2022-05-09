@@ -44,6 +44,5 @@ export async function signOut(req, res){
         res.sendStatus(200)
     }catch(err){
         res.send(err)
-    }
-    
+    }  
 };
