@@ -13,7 +13,7 @@ export async function signInValidation (req, res, next){
     res.locals.user = user;
   }
   else{
-    res.send("Erro")
+    return res.send("Erro")
   }
   next();
 }
